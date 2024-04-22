@@ -34,6 +34,8 @@ function Signup() {
       errors.password = 'La password deve contenere almeno 8 caratteri';
     } else if (!/[A-Z]/.test(password)) {
       errors.password = 'La password deve contenere almeno una lettera maiuscola';
+    } else if (!/[a-z]/.test(password)) {
+      errors.password = 'La password deve contenere almeno una lettera minuscola';
     } else if (!/\d/.test(password)) {
       errors.password = 'La password deve contenere almeno un numero';
     } else if (password !== confermaPassword) {
